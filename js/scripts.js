@@ -1,11 +1,8 @@
 $(function () {
-
-    // init feather icons
-    feather.replace();
-
-    // init tooltip & popovers
-    $('[data-toggle="tooltip"]').tooltip();
-    $('[data-toggle="popover"]').popover();
+    const team = Array.from(document.querySelectorAll('.card-team > *'))
+    team.sort(_ => Math.random() - 0.5).forEach((element, index) => {
+        element.style.order = index
+    })
 
     //page scroll
     $('a.page-scroll').bind('click', function (event) {
@@ -25,7 +22,7 @@ $(function () {
         } else {
             $('.sticky-navigation').removeClass('navbar-shadow');
         }
-        
+
         // adjust scroll to top
         if (scroll >= 600) {
             $('.scroll-top').addClass('active');
@@ -40,16 +37,5 @@ $(function () {
         $('html, body').stop().animate({
             scrollTop: 0
         }, 1000);
-    });
-
-    /**Theme switcher - DEMO PURPOSE ONLY */
-    $('.switcher-trigger').click(function () {
-        $('.switcher-wrap').toggleClass('active');
-    });
-    $('.color-switcher ul li').click(function () {
-        var color = $(this).attr('data-color');
-        $('#theme-color').attr("href", "css/" + color + ".css");
-        $('.color-switcher ul li').removeClass('active');
-        $(this).addClass('active');
     });
 });
