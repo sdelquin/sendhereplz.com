@@ -9900,6 +9900,20 @@ nav .logo {
   max-height: 4.5rem;
 }
 
+.features-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.features-list > li + li {
+  margin-top: 1rem;
+}
+
+.features-list .fa-check {
+  color: #0cb340;
+}
+
 .team-card {
   border-radius: 0.2rem;
   box-shadow: 0 1px 2px #4b4c5226, 0 1px 3px #4b4c5224;
