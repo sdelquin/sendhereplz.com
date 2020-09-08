@@ -9914,6 +9914,7 @@ nav .logo {
   color: #0cb340;
 }
 
+.media-card,
 .team-card {
   border-radius: 0.2rem;
   box-shadow: 0 1px 2px #4b4c5226, 0 1px 3px #4b4c5224;
@@ -9923,4 +9924,8 @@ nav .logo {
   overflow: hidden;
   border-radius: 100%;
   width: 8rem;
+}
+
+.media-logo {
+  max-height: 65px;
 }
