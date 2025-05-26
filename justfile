@@ -1,0 +1,2 @@
+run:
+    open index.html
